@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
   .card {
-    height: 120px;
+    height: 140px;
     background: #111;
     color: #ddd;
     text-align: center;
@@ -37,6 +37,6 @@ export default {
   .card-bottom{
     height: 20px;
     background: #fff;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 </style>
