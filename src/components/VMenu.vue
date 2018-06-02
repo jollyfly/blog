@@ -2,7 +2,7 @@
   <div class="v-menu">
     <el-row>
       <el-col :offset="3" :span="11">
-        <el-menu default-active="1" router mode="horizontal" background-color="#fff" class="v-menu-m">
+        <el-menu default-active="1" mode="horizontal" background-color="#fff" class="v-menu-m">
           <el-menu-item index="1">
             <i class="material-icons">home</i>
             <span slot="title">首页</span>
@@ -26,18 +26,22 @@
         </el-menu>
       </el-col>
       <el-col :span="4">
-        <el-input placeholder="搜索" class="v-menu-search"><el-button slot="append" icon="el-icon-search"></el-button></el-input>
+        <el-input placeholder="搜索" class="v-menu-search">
+          <el-button slot="append" icon="el-icon-search"></el-button>
+        </el-input>
       </el-col>
       <el-col :span="4" :offset="1">
-        <el-button plain class="login-btn">登陆</el-button>
+        <login-model></login-model>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
+import LoginModel from './vMenu/LoginModel'
 export default {
-  name: 'VMenu'
+  name: 'VMenu',
+  components: {LoginModel}
 }
 </script>
 
@@ -48,13 +52,11 @@ export default {
     background: #fff;
     border-bottom: solid 1px #e6e6e6;
   }
-  .v-menu-m{
+
+  .v-menu-m {
     border-bottom: 0;
   }
-  .login-btn{
-    margin-top: 10px;
-  }
-  .v-menu-search{
+  .v-menu-search {
     margin-top: 10px;
   }
 </style>
