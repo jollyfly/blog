@@ -1,7 +1,6 @@
 <template>
   <div>
     <card></card>
-    <v-menu></v-menu>
     <profile></profile>
     <v-link></v-link>
   </div>
@@ -9,7 +8,7 @@
 
 <script>
 import Card from './introduction/Card'
-import VMenu from './introduction/VMenu'
+import VMenu from './VMenu'
 import Profile from './introduction/Profile'
 import VLink from './introduction/VLink'
 

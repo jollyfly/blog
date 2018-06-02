@@ -38,7 +38,7 @@ export default {
     line-height: 36px;
   }
   .profile-item{
-    margin: 0 auto;
+    margin: 20px auto;
     width: 152px;
     height: 50px;
     text-align: center;
