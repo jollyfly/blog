@@ -6,6 +6,15 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'material-design-icons/iconfont/material-icons.css'
+import 'highlight.js/styles/atom-one-light.css'
+import Highlight from 'highlight.js'
+
+Vue.directive('highlight', function (el) {
+  let blocks = el.querySelectorAll('pre code')
+  blocks.forEach((block) => {
+    Highlight.highlightBlock(block)
+  })
+})
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)

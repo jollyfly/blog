@@ -1,13 +1,13 @@
 <template>
 <div class="manage-menu">
-  <el-menu default-active="1">
+  <el-menu default-active="/manage/article/new" router>
     <el-submenu index="1">
       <template slot="title">
         <i class="material-icons">description</i>
         <span>文章管理</span>
       </template>
-      <el-menu-item index="1-1"><i class="material-icons">edit</i>新增文章</el-menu-item>
-      <el-menu-item index="1-1"><i class="material-icons">build</i>管理</el-menu-item>
+      <el-menu-item index="/manage/article/new"><i class="material-icons">edit</i>新增文章</el-menu-item>
+      <el-menu-item index="/manage/article/edit"><i class="material-icons">build</i>管理</el-menu-item>
     </el-submenu>
     <el-menu-item index="2">
       <i class="el-icon-menu"></i>
