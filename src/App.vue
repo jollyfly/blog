@@ -16,21 +16,13 @@
 <script>
 import Introduction from './components/Introduction'
 import BlogContainer from './components/BlogContainer'
-import Marked from 'marked'
 import VMenu from './components/VMenu'
 
 export default {
   name: 'App',
   components: {VMenu, BlogContainer, Introduction},
-  methods: {
-    marks: function () {
-      console.log(Marked('# hello'))
-    }
-  },
-  mounted: function () {
-    this.marks()
+  created: function () {
   }
-
 }
 </script>
 

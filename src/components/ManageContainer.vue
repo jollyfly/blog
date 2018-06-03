@@ -5,8 +5,24 @@
 </template>
 
 <script>
+
 export default {
-  name: 'ManageContainer'
+  name: 'ManageContainer',
+  data () {
+    return {}
+  },
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
+      if (!vm.$store.state.loginModule.loginState) {
+        vm.$message({
+          showClose: true,
+          message: '请先登录',
+          type: 'error'
+        })
+        vm.$router.push('/')
+      }
+    })
+  }
 }
 </script>
 

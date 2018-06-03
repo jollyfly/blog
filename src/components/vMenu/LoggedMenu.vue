@@ -19,12 +19,12 @@
 export default {
   name: 'LoggedMenu',
   methods: {
-    handleCommand (cammand) {
-      if (cammand === 'signOut') {
+    handleCommand (command) {
+      if (command === 'signOut') {
         this.logout()
       }
-      if (cammand === 'manage') {
-        this.$router.push('/manage')
+      if (command === 'manage') {
+        this.$router.push('/manage/article/edit')
       }
     },
     logout: function () {
@@ -33,7 +33,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        window.location = '/'
+        this.$store.commit('logoutS')
       }).catch(() => {
         this.$message({
           type: 'info',

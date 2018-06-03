@@ -21,15 +21,18 @@
 
 <script>
 import LoggedMenu from './LoggedMenu'
+import { mapState } from 'vuex'
 
 export default {
   name: 'LoginModel',
   components: {LoggedMenu},
+  computed: mapState({
+    btnShow: state => !state.loginModule.loginState,
+    menuShow: state => state.loginModule.loginState
+  }),
   data () {
     return {
       visible: false,
-      btnShow: true,
-      menuShow: false,
       loginVO: {
         username: '',
         password: ''
@@ -45,15 +48,8 @@ export default {
     },
     login () {
       this.visible = false
-      this.btnShow = false
-      this.menuShow = true
-    },
-    logout () {
-      this.visible = true
-      this.btnShow = false
-      this.menuShow = true
+      this.$store.commit('loginS')
     }
-
   }
 }
 </script>
