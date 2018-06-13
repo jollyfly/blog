@@ -32,6 +32,7 @@ export default {
 <style scoped>
   .v-article {
     padding: 90px 30px;
+    border-radius: 3px;
   }
 
   .article-title {

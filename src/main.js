@@ -9,6 +9,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'material-design-icons/iconfont/material-icons.css'
 import 'highlight.js/styles/atom-one-light.css'
 import Highlight from 'highlight.js'
+import Axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.directive('highlight', function (el) {
   let blocks = el.querySelectorAll('pre code')
@@ -19,6 +21,7 @@ Vue.directive('highlight', function (el) {
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+Vue.use(Axios, VueAxios)
 
 /* eslint-disable no-new */
 new Vue({

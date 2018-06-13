@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="blog-container" v-for="(article,index) in this.articles" :key="index">
+  <div class="blog-container">
+    <div class="blog-container-article" v-for="(article,index) in this.articles" :key="index">
       <v-article :article="article"/>
       <hr class="blog-hr">
     </div>
@@ -34,9 +34,13 @@ export default {
 </script>
 
 <style scoped>
-  .blog-container {
+  .blog-container{
+  }
+  .blog-container-article {
     background: #fff;
-    margin-left: 23px;
+    margin: 10px 0 10px 23px;
+    opacity: 0.9;
+    border: 1px solid #f8f8f8;
   }
   .blog-hr{
     border: 0;

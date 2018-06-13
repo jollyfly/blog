@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div id="app">
     <v-menu></v-menu>
     <el-row>
-      <el-col :span="4" :offset="3" class="col">
+      <el-col :span="5" :offset="2" class="col">
         <router-view name="left"></router-view>
       </el-col>
-      <el-col :span="13" class="col">
+      <el-col :span="15" class="col">
         <router-view name="right"></router-view>
       </el-col>
     </el-row>
@@ -29,7 +29,7 @@ export default {
 <style>
   body {
     color: #555;
-    background: #f5f7f9;
+    background: url("./assets/back.jpg") no-repeat;
     padding: 0;
     margin: 0;
     height: 100%;
