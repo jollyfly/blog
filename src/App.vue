@@ -22,6 +22,9 @@ export default {
   name: 'App',
   components: {VMenu, BlogContainer, Introduction},
   created: function () {
+    this.$store.dispatch('init').then(() => {
+      console.log(localStorage.getItem('loginState'))
+    })
   }
 }
 </script>
