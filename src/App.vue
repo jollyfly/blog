@@ -20,7 +20,7 @@ import VMenu from './components/VMenu'
 
 export default {
   name: 'App',
-  components: {VMenu, BlogContainer, Introduction},
+  components: { VMenu, BlogContainer, Introduction },
   created: function () {
     this.$store.dispatch('init').then(() => {
       console.log(localStorage.getItem('loginState'))
@@ -29,17 +29,18 @@ export default {
 }
 </script>
 
-<style>
-  body {
-    color: #555;
-    background: url("./assets/back.jpg") no-repeat;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-  }
-  .bottom{
-    padding-top: 50px;
-    padding-bottom: 20px;
-    text-align: center;
-  }
+<style lang="less">
+@import (less) "./assets/less/base";
+body {
+  color: #555;
+  background: url("./assets/back.jpg") no-repeat;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.bottom {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
 </style>
